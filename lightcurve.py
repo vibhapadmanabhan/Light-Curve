@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 import matplotlib
 import numpy as np
 
-#make sure to check the Magnitude column in the data for > or < signs and remove them
-df = pandas.read_csv(r"<filepath>") #substitute <filepath> with file path
+# Make sure to check the Magnitude column in the data for > or < signs and remove them
+df = pandas.read_csv(r"<filepath>")  # Substitute <filepath> with file path
 df.drop_duplicates(subset = "JD", keep = 'first')
-plt.scatter(df["JD"], df["Magnitude"],s = 5,c = 'black')
+plt.scatter(df["JD"], df["Magnitude"],s = 5, c = 'black')
 plt.xlabel("Julian Date")
 plt.ylabel("Magnitude")
 plt.title("Light Curve")
